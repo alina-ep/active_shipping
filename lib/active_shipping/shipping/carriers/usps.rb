@@ -290,7 +290,7 @@ module ActiveMerchant
             end
           end
         end
-        URI.encode(save_request(request.to_s))
+        CGI.escape(save_request(request.to_s))
       end
 
       # important difference with international rate requests:
